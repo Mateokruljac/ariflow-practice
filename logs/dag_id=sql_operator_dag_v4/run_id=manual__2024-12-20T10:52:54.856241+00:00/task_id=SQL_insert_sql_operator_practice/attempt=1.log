@@ -1,0 +1,25 @@
+[2024-12-20T10:52:55.956+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-20T10:52:55.978+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sql_operator_dag_v4.SQL_insert_sql_operator_practice manual__2024-12-20T10:52:54.856241+00:00 [queued]>
+[2024-12-20T10:52:55.987+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sql_operator_dag_v4.SQL_insert_sql_operator_practice manual__2024-12-20T10:52:54.856241+00:00 [queued]>
+[2024-12-20T10:52:55.989+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-20T10:52:56.006+0000] {taskinstance.py:2889} INFO - Executing <Task(SQLExecuteQueryOperator): SQL_insert_sql_operator_practice> on 2024-12-20 10:52:54.856241+00:00
+[2024-12-20T10:52:56.019+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=17272) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-20T10:52:56.022+0000] {standard_task_runner.py:72} INFO - Started process 17275 to run task
+[2024-12-20T10:52:56.027+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sql_operator_dag_v4', 'SQL_insert_sql_operator_practice', 'manual__2024-12-20T10:52:54.856241+00:00', '--job-id', '5602', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgresql.py', '--cfg-path', '/tmp/tmpl3d0xju7']
+[2024-12-20T10:52:56.030+0000] {standard_task_runner.py:105} INFO - Job 5602: Subtask SQL_insert_sql_operator_practice
+[2024-12-20T10:52:56.114+0000] {task_command.py:467} INFO - Running <TaskInstance: sql_operator_dag_v4.SQL_insert_sql_operator_practice manual__2024-12-20T10:52:54.856241+00:00 [running]> on host a998b5b3d359
+[2024-12-20T10:52:56.312+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Mateo' AIRFLOW_CTX_DAG_ID='sql_operator_dag_v4' AIRFLOW_CTX_TASK_ID='SQL_insert_sql_operator_practice' AIRFLOW_CTX_EXECUTION_DATE='2024-12-20T10:52:54.856241+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-20T10:52:54.856241+00:00'
+[2024-12-20T10:52:56.322+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-20T10:52:56.390+0000] {sql.py:278} INFO - Executing: 
+        insert into dag_runs_v2(dt,dag_id) values ('2024-12-20','sql_operator_dag_v4');
+        
+[2024-12-20T10:52:56.409+0000] {base.py:84} INFO - Retrieving connection 'sql_operator_practice'
+[2024-12-20T10:52:56.429+0000] {base.py:84} INFO - Retrieving connection 'sql_operator_practice'
+[2024-12-20T10:52:56.457+0000] {sql.py:553} INFO - Running statement: 
+        insert into dag_runs_v2(dt,dag_id) values ('2024-12-20','sql_operator_dag_v4');
+        , parameters: None
+[2024-12-20T10:52:56.463+0000] {sql.py:562} INFO - Rows affected: 1
+[2024-12-20T10:52:56.481+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T10:52:56.483+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=sql_operator_dag_v4, task_id=SQL_insert_sql_operator_practice, run_id=manual__2024-12-20T10:52:54.856241+00:00, execution_date=20241220T105254, start_date=20241220T105255, end_date=20241220T105256
+[2024-12-20T10:52:56.645+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-20T10:52:56.661+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

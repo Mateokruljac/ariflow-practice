@@ -1,0 +1,35 @@
+[2024-12-19T10:07:28.193+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-19T10:07:28.216+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: python_operator_dag_v2.get_name scheduled__2021-10-15T00:00:00+00:00 [queued]>
+[2024-12-19T10:07:28.227+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: python_operator_dag_v2.get_name scheduled__2021-10-15T00:00:00+00:00 [queued]>
+[2024-12-19T10:07:28.228+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-19T10:07:28.271+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): get_name> on 2021-10-15 00:00:00+00:00
+[2024-12-19T10:07:28.302+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3965) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-19T10:07:28.311+0000] {standard_task_runner.py:72} INFO - Started process 3979 to run task
+[2024-12-19T10:07:28.290+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'python_operator_dag_v2', 'get_name', 'scheduled__2021-10-15T00:00:00+00:00', '--job-id', '1212', '--raw', '--subdir', 'DAGS_FOLDER/python_operator_dag.py', '--cfg-path', '/tmp/tmpmud0l20p']
+[2024-12-19T10:07:28.316+0000] {standard_task_runner.py:105} INFO - Job 1212: Subtask get_name
+[2024-12-19T10:07:28.462+0000] {task_command.py:467} INFO - Running <TaskInstance: python_operator_dag_v2.get_name scheduled__2021-10-15T00:00:00+00:00 [running]> on host 02d979add40a
+[2024-12-19T10:07:28.574+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mateo' AIRFLOW_CTX_DAG_ID='python_operator_dag_v2' AIRFLOW_CTX_TASK_ID='get_name' AIRFLOW_CTX_EXECUTION_DATE='2021-10-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2021-10-15T00:00:00+00:00'
+[2024-12-19T10:07:28.576+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-19T10:07:28.622+0000] {python.py:240} INFO - Done. Returned value was: Josip
+[2024-12-19T10:07:28.690+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-19T10:07:28.691+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=python_operator_dag_v2, task_id=get_name, run_id=scheduled__2021-10-15T00:00:00+00:00, execution_date=20211015T000000, start_date=20241219T100728, end_date=20241219T100728
+[2024-12-19T10:07:28.799+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-19T10:07:28.820+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-19T10:10:57.029+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-19T10:10:57.072+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: python_operator_dag_v2.get_name scheduled__2021-10-15T00:00:00+00:00 [queued]>
+[2024-12-19T10:10:57.085+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: python_operator_dag_v2.get_name scheduled__2021-10-15T00:00:00+00:00 [queued]>
+[2024-12-19T10:10:57.086+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-19T10:10:57.178+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): get_name> on 2021-10-15 00:00:00+00:00
+[2024-12-19T10:10:57.196+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'python_operator_dag_v2', 'get_name', 'scheduled__2021-10-15T00:00:00+00:00', '--job-id', '1246', '--raw', '--subdir', 'DAGS_FOLDER/python_operator_dag.py', '--cfg-path', '/tmp/tmpadh6od43']
+[2024-12-19T10:10:57.196+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4186) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-19T10:10:57.221+0000] {standard_task_runner.py:72} INFO - Started process 4195 to run task
+[2024-12-19T10:10:57.220+0000] {standard_task_runner.py:105} INFO - Job 1246: Subtask get_name
+[2024-12-19T10:10:57.338+0000] {task_command.py:467} INFO - Running <TaskInstance: python_operator_dag_v2.get_name scheduled__2021-10-15T00:00:00+00:00 [running]> on host 02d979add40a
+[2024-12-19T10:10:57.474+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mateo' AIRFLOW_CTX_DAG_ID='python_operator_dag_v2' AIRFLOW_CTX_TASK_ID='get_name' AIRFLOW_CTX_EXECUTION_DATE='2021-10-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2021-10-15T00:00:00+00:00'
+[2024-12-19T10:10:57.476+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-19T10:10:57.530+0000] {python.py:240} INFO - Done. Returned value was: Josip
+[2024-12-19T10:10:57.586+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-19T10:10:57.588+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=python_operator_dag_v2, task_id=get_name, run_id=scheduled__2021-10-15T00:00:00+00:00, execution_date=20211015T000000, start_date=20241219T101057, end_date=20241219T101057
+[2024-12-19T10:10:57.738+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-19T10:10:57.773+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-19T10:10:57.776+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,32 @@
+[2024-12-20T10:37:13.828+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-20T10:37:13.852+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sql_operator_dag.SQL_provider_task scheduled__2024-01-07T22:00:00+00:00 [queued]>
+[2024-12-20T10:37:13.866+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sql_operator_dag.SQL_provider_task scheduled__2024-01-07T22:00:00+00:00 [queued]>
+[2024-12-20T10:37:13.867+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-20T10:37:13.916+0000] {taskinstance.py:2889} INFO - Executing <Task(SQLExecuteQueryOperator): SQL_provider_task> on 2024-01-07 22:00:00+00:00
+[2024-12-20T10:37:13.926+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=14611) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-20T10:37:13.928+0000] {standard_task_runner.py:72} INFO - Started process 14616 to run task
+[2024-12-20T10:37:13.928+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'sql_operator_dag', 'SQL_provider_task', 'scheduled__2024-01-07T22:00:00+00:00', '--job-id', '5114', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgresql.py', '--cfg-path', '/tmp/tmp1pyzl9ek']
+[2024-12-20T10:37:13.931+0000] {standard_task_runner.py:105} INFO - Job 5114: Subtask SQL_provider_task
+[2024-12-20T10:37:13.994+0000] {task_command.py:467} INFO - Running <TaskInstance: sql_operator_dag.SQL_provider_task scheduled__2024-01-07T22:00:00+00:00 [running]> on host a998b5b3d359
+[2024-12-20T10:37:14.107+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Mateo' AIRFLOW_CTX_DAG_ID='sql_operator_dag' AIRFLOW_CTX_TASK_ID='SQL_provider_task' AIRFLOW_CTX_EXECUTION_DATE='2024-01-07T22:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-07T22:00:00+00:00'
+[2024-12-20T10:37:14.109+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-20T10:37:14.149+0000] {sql.py:278} INFO - Executing: 
+        create table if not exists dag_runs(
+            dt date,
+            dag_id varchar,
+            primary key (dt,dag_id) 
+        )
+        
+[2024-12-20T10:37:14.169+0000] {base.py:84} INFO - Retrieving connection 'sql_operator_practice'
+[2024-12-20T10:37:14.186+0000] {base.py:84} INFO - Retrieving connection 'sql_operator_practice'
+[2024-12-20T10:37:14.203+0000] {sql.py:553} INFO - Running statement: 
+        create table if not exists dag_runs(
+            dt date,
+            dag_id varchar,
+            primary key (dt,dag_id) 
+        )
+        , parameters: None
+[2024-12-20T10:37:14.233+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T10:37:14.235+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=sql_operator_dag, task_id=SQL_provider_task, run_id=scheduled__2024-01-07T22:00:00+00:00, execution_date=20240107T220000, start_date=20241220T103713, end_date=20241220T103714
+[2024-12-20T10:37:14.308+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-20T10:37:14.331+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

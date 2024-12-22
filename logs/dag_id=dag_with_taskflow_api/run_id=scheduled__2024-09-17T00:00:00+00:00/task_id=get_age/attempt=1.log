@@ -1,0 +1,35 @@
+[2024-12-19T13:51:15.815+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-19T13:51:15.845+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_taskflow_api.get_age scheduled__2024-09-17T00:00:00+00:00 [queued]>
+[2024-12-19T13:51:15.860+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_taskflow_api.get_age scheduled__2024-09-17T00:00:00+00:00 [queued]>
+[2024-12-19T13:51:15.861+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-19T13:51:15.890+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): get_age> on 2024-09-17 00:00:00+00:00
+[2024-12-19T13:51:15.901+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=16007) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-19T13:51:15.905+0000] {standard_task_runner.py:72} INFO - Started process 16013 to run task
+[2024-12-19T13:51:15.919+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_taskflow_api', 'get_age', 'scheduled__2024-09-17T00:00:00+00:00', '--job-id', '4324', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_taskflow_api.py', '--cfg-path', '/tmp/tmp1jgzufvw']
+[2024-12-19T13:51:15.927+0000] {standard_task_runner.py:105} INFO - Job 4324: Subtask get_age
+[2024-12-19T13:51:16.044+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_taskflow_api.get_age scheduled__2024-09-17T00:00:00+00:00 [running]> on host 02d979add40a
+[2024-12-19T13:51:16.311+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mateo' AIRFLOW_CTX_DAG_ID='dag_with_taskflow_api' AIRFLOW_CTX_TASK_ID='get_age' AIRFLOW_CTX_EXECUTION_DATE='2024-09-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-17T00:00:00+00:00'
+[2024-12-19T13:51:16.314+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-19T13:51:16.327+0000] {python.py:240} INFO - Done. Returned value was: 19
+[2024-12-19T13:51:16.374+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-19T13:51:16.378+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_with_taskflow_api, task_id=get_age, run_id=scheduled__2024-09-17T00:00:00+00:00, execution_date=20240917T000000, start_date=20241219T135115, end_date=20241219T135116
+[2024-12-19T13:51:16.484+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-19T13:51:16.506+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-20T10:28:46.895+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-20T10:28:46.935+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_taskflow_api.get_age scheduled__2024-09-17T00:00:00+00:00 [queued]>
+[2024-12-20T10:28:46.951+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_taskflow_api.get_age scheduled__2024-09-17T00:00:00+00:00 [queued]>
+[2024-12-20T10:28:46.955+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-20T10:28:46.993+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): get_age> on 2024-09-17 00:00:00+00:00
+[2024-12-20T10:28:47.021+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_taskflow_api', 'get_age', 'scheduled__2024-09-17T00:00:00+00:00', '--job-id', '4639', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_taskflow_api.py', '--cfg-path', '/tmp/tmpehh_eng2']
+[2024-12-20T10:28:47.026+0000] {standard_task_runner.py:105} INFO - Job 4639: Subtask get_age
+[2024-12-20T10:28:47.060+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=12590) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-20T10:28:47.063+0000] {standard_task_runner.py:72} INFO - Started process 12607 to run task
+[2024-12-20T10:28:47.190+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_taskflow_api.get_age scheduled__2024-09-17T00:00:00+00:00 [running]> on host a998b5b3d359
+[2024-12-20T10:28:47.352+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mateo' AIRFLOW_CTX_DAG_ID='dag_with_taskflow_api' AIRFLOW_CTX_TASK_ID='get_age' AIRFLOW_CTX_EXECUTION_DATE='2024-09-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-17T00:00:00+00:00'
+[2024-12-20T10:28:47.360+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-20T10:28:47.364+0000] {python.py:240} INFO - Done. Returned value was: 19
+[2024-12-20T10:28:47.411+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T10:28:47.412+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_with_taskflow_api, task_id=get_age, run_id=scheduled__2024-09-17T00:00:00+00:00, execution_date=20240917T000000, start_date=20241220T102846, end_date=20241220T102847
+[2024-12-20T10:28:47.456+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-20T10:28:47.507+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-20T10:28:47.515+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

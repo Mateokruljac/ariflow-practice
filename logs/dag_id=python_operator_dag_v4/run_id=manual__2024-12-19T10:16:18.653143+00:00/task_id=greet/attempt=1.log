@@ -1,0 +1,17 @@
+[2024-12-19T10:16:20.661+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-19T10:16:20.697+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: python_operator_dag_v4.greet manual__2024-12-19T10:16:18.653143+00:00 [queued]>
+[2024-12-19T10:16:20.715+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: python_operator_dag_v4.greet manual__2024-12-19T10:16:18.653143+00:00 [queued]>
+[2024-12-19T10:16:20.717+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-12-19T10:16:20.787+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): greet> on 2024-12-19 10:16:18.653143+00:00
+[2024-12-19T10:16:20.803+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4549) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-19T10:16:20.814+0000] {standard_task_runner.py:72} INFO - Started process 4555 to run task
+[2024-12-19T10:16:20.814+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'python_operator_dag_v4', 'greet', 'manual__2024-12-19T10:16:18.653143+00:00', '--job-id', '1301', '--raw', '--subdir', 'DAGS_FOLDER/python_operator_dag.py', '--cfg-path', '/tmp/tmprgm709br']
+[2024-12-19T10:16:20.817+0000] {standard_task_runner.py:105} INFO - Job 1301: Subtask greet
+[2024-12-19T10:16:20.953+0000] {task_command.py:467} INFO - Running <TaskInstance: python_operator_dag_v4.greet manual__2024-12-19T10:16:18.653143+00:00 [running]> on host 02d979add40a
+[2024-12-19T10:16:21.071+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mateo' AIRFLOW_CTX_DAG_ID='python_operator_dag_v4' AIRFLOW_CTX_TASK_ID='greet' AIRFLOW_CTX_EXECUTION_DATE='2024-12-19T10:16:18.653143+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-19T10:16:18.653143+00:00'
+[2024-12-19T10:16:21.073+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-19T10:16:21.125+0000] {python.py:240} INFO - Done. Returned value was: Hello world and Josip
+[2024-12-19T10:16:21.168+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-19T10:16:21.171+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=python_operator_dag_v4, task_id=greet, run_id=manual__2024-12-19T10:16:18.653143+00:00, execution_date=20241219T101618, start_date=20241219T101620, end_date=20241219T101621
+[2024-12-19T10:16:21.240+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-19T10:16:21.265+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
